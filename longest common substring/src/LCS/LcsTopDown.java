@@ -28,13 +28,14 @@ public class LcsTopDown {
         int result =Integer.MIN_VALUE;
         for(int i=0 ;i<=m ;i++)
         {
-//        	System.out.println();
         for(int j=0 ;j<=n ;j++)
 	       if(result<dp[i][j])
 	    	   result=dp[i][j];
         }
         
    	 System.out.println(result);
+
+	
 	}
-//	 System.out.println(dp[m][n]);
+
 }

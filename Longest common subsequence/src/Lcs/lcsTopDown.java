@@ -32,7 +32,30 @@ public class lcsTopDown {
         	}
         }
         
-        System.out.println(dp[n][m]);
+        System.out.println(dp[n][m]+"\n");
+        
+        for(int i=0; i<=n ;i++)
+        {	System.out.println();
+        	for(int j=0 ;j<=m ;j++)
+        		System.out.print(dp[i][j]+" ");
+        }
+        
+        while(n>0 && m>0)
+        {
+        	if(s1.charAt(n-1)==s2.charAt(m-1))
+        	{
+        		System.out.print(s1.charAt(n-1));
+	        	n--;
+	        	m--;
+        	}
+        	else
+        	{
+        	if(dp[n-1][m]>dp[n][m-1])
+        		n--;
+        	else
+        		m--;
+        	}
+        }
         
 	}
 

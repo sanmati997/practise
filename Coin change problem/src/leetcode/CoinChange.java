@@ -3,7 +3,7 @@ package leetcode;
 public class CoinChange {
 
 	public static void main(String[] args) {
-		//similar to unbonded knapsac kwith smaller changes
+		//similar to unbonded knapsack with smaller changes
 		
 		//same code for subset is present or not(count of how many subset present)
 		int sum = 4;
