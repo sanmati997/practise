@@ -49,10 +49,10 @@ public class Island {
 		dfs(i,j-1,m,vis);
 		
 		/*to check diagonally also call below recursive call*/
-		dfs(i-1,j-i,m,vis);
-		dfs(i-1,j+1,m,vis);
-		dfs(i+1,j-1,m,vis);
-		dfs(i+1,j+1,m,vis);
+		//dfs(i-1,j-i,m,vis);
+	        //dfs(i-1,j+1,m,vis);
+		//dfs(i+1,j-1,m,vis);
+		//dfs(i+1,j+1,m,vis);
 	}
 
 }
