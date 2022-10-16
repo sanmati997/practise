@@ -1,0 +1,199 @@
+https://zensar-my.sharepoint.com/:f:/p/vranda_daga/EoZDyoffisNPgTYAuTDVxw0BJhA89zGHCm_uc0KFbKcOpA?e=NC72hR
+
+
+https://forms.office.com/r/ubpqsfKwrw
+
+Git Session Notes
+
+Day 1
+
+
+  What is Git?
+
+    VCS : Version Control System  : Its a s/w designed to record changes made to file/files over a
+                                   time period
+                                   
+
+ https://git-scm.com/download/mac
+
+
+
+   Day 2 : 24th March 2021
+   git init   
+
+   git add .
+   git add hello.txt
+   git add *.js
+   git add a.*
+   
+
+ git commit -m InitalCommit
+
+
+Rules for commit messages
+  1. The message should be elobarate so that we can see the reason why that commit was made
+  2. Commit messages are always written in presentence
+ git commit -m  "Add table tag in index.html" 
+
+
+ git status 
+
+files with extension .md is aMarkDown syntax file
+
+
+   Git diff (diff == difference)
+  1. what changes have we staged that are ready to be committed?  git diff --staged
+  2. What changes we have made but not staged yet
+    
+
+diff --git a/site.css b/site.css    === compared files
+
+index 576c52d..20dcf9a 100644   == file metadata SHA1 code and 100644 represents a normal file
+--- a/site.css
++++b/site.css   === Change markers for File a/b
+
+@@ -1,3 +1,6 @@    == Chunk Header
+ 
+
+Intro to Git Branch
+
+A branch in git is just a lightweight moveable pointer to a commit made in a project.
+
+
+ git branch test   (a branch gets created but  we are still in the master branch)
+
+ git checkout test (with this command we switch to the test branch
+
+
+
+  git checkout -b Branch1  (this command creates a new branch and also switches to that branch )
+	
+ Day3
+https://forms.office.com/r/Xew6thgHyK
+
+
+  Fast forward merge : When no activity is done in the master after you branched out to a newBranch
+                       and you continue to work only with NewBranch before merging
+  Recurssive Merge : When you keep switching between branches and committing before merging then
+                     the merge is called a recurssive startegy merge
+
+Merge Conflict : [Pending]
+
+    REBASING  and Cherry Picking
+
+  Rebasing is to clean up the local history so that we can just focus on end result.
+   Rebase is an advanced feature of Git
+
+  Clean up the history of commits
+  pull  changes without merge
+
+  git rebase <branch-name>
+
+
+   git log --online
+   
+
+    git merge-base solution master  // Gets the original base of the solution branch created from 
+                                    // master
+    git rebase -i <commit-id>
+
+
+     Commands for Cherry picking
+       git log --oneline   : find the commit you want to cherry pick
+       git log <branch-name> --oneline 
+
+
+     git checkout <branch-name>   : where do you want to put the commit? checkout to that branch
+      
+
+      git cherry-pick <commit sha1>   This will perform the cherry-pick to append
+                                       the commit to HEAD
+
+
+
+    c6c3365 One in y branch
+
+   28c2dd1 
+
+git branch -d <branchname>
+git branch -D <branch name> to force delete of uncommitted branch
+
+//you can delete a branch only if you are not in that branch which you want to delete
+
+rename
+ git branch -m <branch name> //To rename the branch name
+
+
+Day 4 (26th March 2021)
+https://forms.office.com/Pages/ResponsePage.aspx?id=Mj58IBVx006KVSL37bd9yYmCDpo8eFJCq4f0w4L0P75UNFBMMjZQNFlYQ1JTN1JETzE2VVZUVjE5OC4u
+
+https://forms.office.com/r/6FStCPjvZV  
+
+
+
+  Centralized or remote repo, pull push diff
+  Avoid conflicts
+      .gitignore file
+  
+
+pull requests 
+How to resolve difficult merge conflicts
+       
+    
+ Remote repo is just a location where the project is hosted
+  GitHub, BitBucket, GitLab, 
+
+Reference Project
+
+git clone <remote-url>   : pull the code and set up a local branch
+
+origin :     Default name for remote server
+
+ git remote add <name> <remote-url>  : giving name to the remote repo
+
+ git pull  === (fetch and merge)
+
+git remote -v   : list the remotes and urls
+
+ git push : push local repo to the remote
+
+Ignore files
+ .gitignore
+  #this is a commet in .gitignore file
+   **/bin
+  *.zip
+  /node_modules
+
+
+
+
+Team Conventions
+
+   have a comman .gitignore file
+   README.md
+   Frequent smaller commits is preferred vs.  one giant commit
+
+
+
+  Pull Request :
+
+ . push branch to remote this will open a pull request
+ . once you open a pull request we can add reviewers and discuss the changes with the team
+ .  Once the reviewers ask you to make changes in the branch , make  the fix of code in local
+    branch and push to the remote
+. We do not rebase after pushing to the remote repo
+ . once the pull request is approved we can merge the branch with the master/main and delete the branch
+
+       
+
+
+   
+
+
+ 
+
+   
+
+
+
+    
